@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DB_9F3E71_ppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="searchTracker">
+          <Key>
+            <PropertyRef Name="marketSearchID" />
+          </Key>
+          <Property Name="ipAddress" Type="nvarchar" MaxLength="15" />
+          <Property Name="searchDate" Type="datetime" Nullable="false" />
+          <Property Name="marketSearchID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="marketName" Type="nvarchar" MaxLength="22" />
+          <Property Name="commName" Type="nvarchar" MaxLength="50" />
+          <Property Name="packageDesc" Type="nvarchar" MaxLength="150" />
+          <Property Name="itemSizeDesc" Type="nvarchar" MaxLength="100" />
+          <Property Name="varietyName" Type="nvarchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="tMarketTable">
+          <Key>
+            <PropertyRef Name="tMarketID" />
+          </Key>
+          <Property Name="commName" Type="nvarchar" MaxLength="50" />
+          <Property Name="cityName" Type="nvarchar" MaxLength="22" />
+          <Property Name="organic" Type="nvarchar" MaxLength="10" />
+          <Property Name="packageDesc" Type="nvarchar" MaxLength="150" />
+          <Property Name="varietyName" Type="nvarchar" MaxLength="150" />
+          <Property Name="subvarName" Type="nvarchar" MaxLength="25" />
+          <Property Name="gradeDesc" Type="nvarchar" MaxLength="25" />
+          <Property Name="reportDate" Type="datetime" />
+          <Property Name="lowPriceMin" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="highPriceMax" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="mostlyLowMin" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="mostlyHighMax" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="originName" Type="nvarchar" MaxLength="100" />
+          <Property Name="districtName" Type="nvarchar" MaxLength="100" />
+          <Property Name="itemSizeDesc" Type="nvarchar" MaxLength="100" />
+          <Property Name="color" Type="nvarchar" MaxLength="25" />
+          <Property Name="envDesc" Type="nvarchar" MaxLength="100" />
+          <Property Name="unitSale" Type="nvarchar" MaxLength="25" />
+          <Property Name="quality" Type="nvarchar" MaxLength="100" />
+          <Property Name="condition" Type="nvarchar" MaxLength="25" />
+          <Property Name="appearance" Type="nvarchar" MaxLength="15" />
+          <Property Name="storage" Type="nvarchar" MaxLength="15" />
+          <Property Name="crop" Type="nvarchar" MaxLength="15" />
+          <Property Name="rePack" Type="nvarchar" MaxLength="10" />
+          <Property Name="transmode" Type="nvarchar" MaxLength="10" />
+          <Property Name="offerings" Type="nvarchar" MaxLength="200" />
+          <Property Name="marketTone" Type="nvarchar" MaxLength="100" />
+          <Property Name="priceComment" Type="nvarchar" MaxLength="100" />
+          <Property Name="comment" Type="nvarchar" MaxLength="100" />
+          <Property Name="tMarketID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="recordCreateDate" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="DB_9F3E71_ppModelStoreContainer">
+          <EntitySet Name="searchTracker" EntityType="Self.searchTracker" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tMarketTable" EntityType="Self.tMarketTable" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_9F3E71_ppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DB_9F3E71_ppEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tMarketTables" EntityType="DB_9F3E71_ppModel.tMarketTable" />
+          <EntitySet Name="searchTrackers" EntityType="DB_9F3E71_ppModel.searchTracker" />
+        </EntityContainer>
+        <EntityType Name="tMarketTable">
+          <Key>
+            <PropertyRef Name="tMarketID" />
+          </Key>
+          <Property Name="commName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="cityName" Type="String" MaxLength="22" FixedLength="false" Unicode="true" />
+          <Property Name="organic" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="packageDesc" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="varietyName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="subvarName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="gradeDesc" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="reportDate" Type="DateTime" Precision="3" />
+          <Property Name="lowPriceMin" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="highPriceMax" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="mostlyLowMin" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="mostlyHighMax" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="originName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="districtName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="itemSizeDesc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="color" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="envDesc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="unitSale" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="quality" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="condition" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="appearance" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="storage" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="crop" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="rePack" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="transmode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="offerings" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="marketTone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="priceComment" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="comment" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="tMarketID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="recordCreateDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="searchTracker">
+          <Key>
+            <PropertyRef Name="marketSearchID" />
+          </Key>
+          <Property Name="ipAddress" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="searchDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="marketSearchID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="marketName" Type="String" MaxLength="22" FixedLength="false" Unicode="true" />
+          <Property Name="commName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="packageDesc" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="itemSizeDesc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="varietyName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_9F3E71_ppModelStoreContainer" CdmEntityContainer="DB_9F3E71_ppEntities">
+          <EntitySetMapping Name="tMarketTables">
+            <EntityTypeMapping TypeName="DB_9F3E71_ppModel.tMarketTable">
+              <MappingFragment StoreEntitySet="tMarketTable">
+                <ScalarProperty Name="recordCreateDate" ColumnName="recordCreateDate" />
+                <ScalarProperty Name="tMarketID" ColumnName="tMarketID" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+                <ScalarProperty Name="priceComment" ColumnName="priceComment" />
+                <ScalarProperty Name="marketTone" ColumnName="marketTone" />
+                <ScalarProperty Name="offerings" ColumnName="offerings" />
+                <ScalarProperty Name="transmode" ColumnName="transmode" />
+                <ScalarProperty Name="rePack" ColumnName="rePack" />
+                <ScalarProperty Name="crop" ColumnName="crop" />
+                <ScalarProperty Name="storage" ColumnName="storage" />
+                <ScalarProperty Name="appearance" ColumnName="appearance" />
+                <ScalarProperty Name="condition" ColumnName="condition" />
+                <ScalarProperty Name="quality" ColumnName="quality" />
+                <ScalarProperty Name="unitSale" ColumnName="unitSale" />
+                <ScalarProperty Name="envDesc" ColumnName="envDesc" />
+                <ScalarProperty Name="color" ColumnName="color" />
+                <ScalarProperty Name="itemSizeDesc" ColumnName="itemSizeDesc" />
+                <ScalarProperty Name="districtName" ColumnName="districtName" />
+                <ScalarProperty Name="originName" ColumnName="originName" />
+                <ScalarProperty Name="mostlyHighMax" ColumnName="mostlyHighMax" />
+                <ScalarProperty Name="mostlyLowMin" ColumnName="mostlyLowMin" />
+                <ScalarProperty Name="highPriceMax" ColumnName="highPriceMax" />
+                <ScalarProperty Name="lowPriceMin" ColumnName="lowPriceMin" />
+                <ScalarProperty Name="reportDate" ColumnName="reportDate" />
+                <ScalarProperty Name="gradeDesc" ColumnName="gradeDesc" />
+                <ScalarProperty Name="subvarName" ColumnName="subvarName" />
+                <ScalarProperty Name="varietyName" ColumnName="varietyName" />
+                <ScalarProperty Name="packageDesc" ColumnName="packageDesc" />
+                <ScalarProperty Name="organic" ColumnName="organic" />
+                <ScalarProperty Name="cityName" ColumnName="cityName" />
+                <ScalarProperty Name="commName" ColumnName="commName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="searchTrackers">
+            <EntityTypeMapping TypeName="DB_9F3E71_ppModel.searchTracker">
+              <MappingFragment StoreEntitySet="searchTracker">
+                <ScalarProperty Name="varietyName" ColumnName="varietyName" />
+                <ScalarProperty Name="itemSizeDesc" ColumnName="itemSizeDesc" />
+                <ScalarProperty Name="packageDesc" ColumnName="packageDesc" />
+                <ScalarProperty Name="commName" ColumnName="commName" />
+                <ScalarProperty Name="marketName" ColumnName="marketName" />
+                <ScalarProperty Name="marketSearchID" ColumnName="marketSearchID" />
+                <ScalarProperty Name="searchDate" ColumnName="searchDate" />
+                <ScalarProperty Name="ipAddress" ColumnName="ipAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

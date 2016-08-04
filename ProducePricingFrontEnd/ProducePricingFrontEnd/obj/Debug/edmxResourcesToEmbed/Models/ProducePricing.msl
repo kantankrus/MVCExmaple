@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_9F3E71_ppModelStoreContainer" CdmEntityContainer="DB_9F3E71_ppEntities">
+    <EntitySetMapping Name="tMarketTables">
+      <EntityTypeMapping TypeName="DB_9F3E71_ppModel.tMarketTable">
+        <MappingFragment StoreEntitySet="tMarketTable">
+          <ScalarProperty Name="recordCreateDate" ColumnName="recordCreateDate" />
+          <ScalarProperty Name="tMarketID" ColumnName="tMarketID" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="priceComment" ColumnName="priceComment" />
+          <ScalarProperty Name="marketTone" ColumnName="marketTone" />
+          <ScalarProperty Name="offerings" ColumnName="offerings" />
+          <ScalarProperty Name="transmode" ColumnName="transmode" />
+          <ScalarProperty Name="rePack" ColumnName="rePack" />
+          <ScalarProperty Name="crop" ColumnName="crop" />
+          <ScalarProperty Name="storage" ColumnName="storage" />
+          <ScalarProperty Name="appearance" ColumnName="appearance" />
+          <ScalarProperty Name="condition" ColumnName="condition" />
+          <ScalarProperty Name="quality" ColumnName="quality" />
+          <ScalarProperty Name="unitSale" ColumnName="unitSale" />
+          <ScalarProperty Name="envDesc" ColumnName="envDesc" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="itemSizeDesc" ColumnName="itemSizeDesc" />
+          <ScalarProperty Name="districtName" ColumnName="districtName" />
+          <ScalarProperty Name="originName" ColumnName="originName" />
+          <ScalarProperty Name="mostlyHighMax" ColumnName="mostlyHighMax" />
+          <ScalarProperty Name="mostlyLowMin" ColumnName="mostlyLowMin" />
+          <ScalarProperty Name="highPriceMax" ColumnName="highPriceMax" />
+          <ScalarProperty Name="lowPriceMin" ColumnName="lowPriceMin" />
+          <ScalarProperty Name="reportDate" ColumnName="reportDate" />
+          <ScalarProperty Name="gradeDesc" ColumnName="gradeDesc" />
+          <ScalarProperty Name="subvarName" ColumnName="subvarName" />
+          <ScalarProperty Name="varietyName" ColumnName="varietyName" />
+          <ScalarProperty Name="packageDesc" ColumnName="packageDesc" />
+          <ScalarProperty Name="organic" ColumnName="organic" />
+          <ScalarProperty Name="cityName" ColumnName="cityName" />
+          <ScalarProperty Name="commName" ColumnName="commName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="searchTrackers">
+      <EntityTypeMapping TypeName="DB_9F3E71_ppModel.searchTracker">
+        <MappingFragment StoreEntitySet="searchTracker">
+          <ScalarProperty Name="varietyName" ColumnName="varietyName" />
+          <ScalarProperty Name="itemSizeDesc" ColumnName="itemSizeDesc" />
+          <ScalarProperty Name="packageDesc" ColumnName="packageDesc" />
+          <ScalarProperty Name="commName" ColumnName="commName" />
+          <ScalarProperty Name="marketName" ColumnName="marketName" />
+          <ScalarProperty Name="marketSearchID" ColumnName="marketSearchID" />
+          <ScalarProperty Name="searchDate" ColumnName="searchDate" />
+          <ScalarProperty Name="ipAddress" ColumnName="ipAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

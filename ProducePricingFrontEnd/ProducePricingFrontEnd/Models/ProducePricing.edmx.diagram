@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6a15cfdbaf864d44b221fd13161f16a4" Name="Diagram1" ZoomLevel="57">
+        <EntityTypeShape EntityType="DB_9F3E71_ppModel.tMarketTable" Width="2.625" PointX="2.25" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_9F3E71_ppModel.searchTracker" Width="1.5" PointX="5.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

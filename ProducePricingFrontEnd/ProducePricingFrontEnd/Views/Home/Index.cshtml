@@ -1,0 +1,59 @@
+﻿@model ProducePricingFrontEnd.Models.MainViewModel
+
+<br /><br />
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <p class="lead">Daily Terminal Market Data</p><small> Sourced from the USDA</small>
+        <form class="form-inline">
+            <div class="form-group col-xs-push-10 col-md-pull-10">
+                    <input class="form-control input-lg" id="txtProduct" name="txtProduct" type="text" placeholder="e.g. ALFALFA SPROUTS" autocomplete="on">
+                </div>
+            <div class="form-group">
+                @Html.DropDownListFor(x => x.Markets, new SelectList(Model.Markets, "Value", "Text"), new { @class = "form-control input-lg" })
+            </div>
+            <button type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-search"></span></button>
+        </form>
+      <div id="status" name="status"></div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<div class="row">
+    
+
+
+    
+
+    <br />
+
+    <div id="divMarketData" name="divMarketData">
+        <table id="tblMarketData" name="tblMarketData" class="table indexTable table-hover" style="background-color:white">
+            <thead>
+                <tr>
+                    <th>Search #:</th>
+                    <th>Market:</th>
+                    <th>High Price:</th>
+                    <th>Low Price:</th>
+                    <th>Last Week Avg:</th>
+                    <th>Commodity Name:</th>
+                    <th>Packaging:</th>
+                    <th>Variety:</th>
+                    <th>Item Size:</th>
+                    <th>Market Date:</th>
+                </tr>
+            </thead>
+            <tbody id="tblMarketDataBody">
+                <tr></tr>
+            </tbody>
+        </table>
+
+    </div>
+    <button type="button" href="#" id="btnClear" name="btnClear" class="btn btn-default btn-sm">Clear results</button>
+</div>
+
+@section Scripts
+{ 
+    <script>
+        $('.navbar').hide();
+    </script>
+}

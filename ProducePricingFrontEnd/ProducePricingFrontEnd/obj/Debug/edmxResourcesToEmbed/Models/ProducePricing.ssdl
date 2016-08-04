@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_9F3E71_ppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="searchTracker">
+    <Key>
+      <PropertyRef Name="marketSearchID" />
+    </Key>
+    <Property Name="ipAddress" Type="nvarchar" MaxLength="15" />
+    <Property Name="searchDate" Type="datetime" Nullable="false" />
+    <Property Name="marketSearchID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="marketName" Type="nvarchar" MaxLength="22" />
+    <Property Name="commName" Type="nvarchar" MaxLength="50" />
+    <Property Name="packageDesc" Type="nvarchar" MaxLength="150" />
+    <Property Name="itemSizeDesc" Type="nvarchar" MaxLength="100" />
+    <Property Name="varietyName" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tMarketTable">
+    <Key>
+      <PropertyRef Name="tMarketID" />
+    </Key>
+    <Property Name="commName" Type="nvarchar" MaxLength="50" />
+    <Property Name="cityName" Type="nvarchar" MaxLength="22" />
+    <Property Name="organic" Type="nvarchar" MaxLength="10" />
+    <Property Name="packageDesc" Type="nvarchar" MaxLength="150" />
+    <Property Name="varietyName" Type="nvarchar" MaxLength="150" />
+    <Property Name="subvarName" Type="nvarchar" MaxLength="25" />
+    <Property Name="gradeDesc" Type="nvarchar" MaxLength="25" />
+    <Property Name="reportDate" Type="datetime" />
+    <Property Name="lowPriceMin" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="highPriceMax" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="mostlyLowMin" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="mostlyHighMax" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="originName" Type="nvarchar" MaxLength="100" />
+    <Property Name="districtName" Type="nvarchar" MaxLength="100" />
+    <Property Name="itemSizeDesc" Type="nvarchar" MaxLength="100" />
+    <Property Name="color" Type="nvarchar" MaxLength="25" />
+    <Property Name="envDesc" Type="nvarchar" MaxLength="100" />
+    <Property Name="unitSale" Type="nvarchar" MaxLength="25" />
+    <Property Name="quality" Type="nvarchar" MaxLength="100" />
+    <Property Name="condition" Type="nvarchar" MaxLength="25" />
+    <Property Name="appearance" Type="nvarchar" MaxLength="15" />
+    <Property Name="storage" Type="nvarchar" MaxLength="15" />
+    <Property Name="crop" Type="nvarchar" MaxLength="15" />
+    <Property Name="rePack" Type="nvarchar" MaxLength="10" />
+    <Property Name="transmode" Type="nvarchar" MaxLength="10" />
+    <Property Name="offerings" Type="nvarchar" MaxLength="200" />
+    <Property Name="marketTone" Type="nvarchar" MaxLength="100" />
+    <Property Name="priceComment" Type="nvarchar" MaxLength="100" />
+    <Property Name="comment" Type="nvarchar" MaxLength="100" />
+    <Property Name="tMarketID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="recordCreateDate" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="DB_9F3E71_ppModelStoreContainer">
+    <EntitySet Name="searchTracker" EntityType="Self.searchTracker" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tMarketTable" EntityType="Self.tMarketTable" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

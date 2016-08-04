@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_9F3E71_ppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DB_9F3E71_ppEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tMarketTables" EntityType="DB_9F3E71_ppModel.tMarketTable" />
+    <EntitySet Name="searchTrackers" EntityType="DB_9F3E71_ppModel.searchTracker" />
+  </EntityContainer>
+  <EntityType Name="tMarketTable">
+    <Key>
+      <PropertyRef Name="tMarketID" />
+    </Key>
+    <Property Name="commName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cityName" Type="String" MaxLength="22" FixedLength="false" Unicode="true" />
+    <Property Name="organic" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="packageDesc" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="varietyName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="subvarName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="gradeDesc" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="reportDate" Type="DateTime" Precision="3" />
+    <Property Name="lowPriceMin" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="highPriceMax" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="mostlyLowMin" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="mostlyHighMax" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="originName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="districtName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="itemSizeDesc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="color" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="envDesc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="unitSale" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="quality" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="condition" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="appearance" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="storage" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="crop" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="rePack" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="transmode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="offerings" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="marketTone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="priceComment" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="comment" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="tMarketID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="recordCreateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="searchTracker">
+    <Key>
+      <PropertyRef Name="marketSearchID" />
+    </Key>
+    <Property Name="ipAddress" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="searchDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="marketSearchID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="marketName" Type="String" MaxLength="22" FixedLength="false" Unicode="true" />
+    <Property Name="commName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="packageDesc" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="itemSizeDesc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="varietyName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>
